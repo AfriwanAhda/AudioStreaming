@@ -1,9 +1,9 @@
 apply plugin: 'com.android.library'
 
 ext {
-    PUBLISH_GROUP_ID = 'com.hugomatilla'
-    PUBLISH_ARTIFACT_ID = 'audioplayerview'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_GROUP_ID = 'afriwan.ahda'
+    PUBLISH_ARTIFACT_ID = 'audiostreaming'
+    PUBLISH_VERSION = '1.0.2'
 }
 
 android {
