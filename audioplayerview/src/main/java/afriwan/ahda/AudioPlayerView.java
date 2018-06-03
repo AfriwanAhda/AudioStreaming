@@ -1,9 +1,10 @@
-package com.hugomatilla.audioplayerview;
+package afriwan.ahda;
 
 /**
  * Created by hugomatilla on 10/02/16.
  */
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,8 +18,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import afriwan.ahda.R;
+
 import java.io.IOException;
 
+@SuppressLint("AppCompatCustomView")
 public class AudioPlayerView extends TextView {
     private static final String NULL_PARAMETER_ERROR = "`stopText`, `playText` and `loadingText`" +
             " must have some value, if `useIcons` is set to false. Set `useIcons` to true, or add strings to stopText`, " +

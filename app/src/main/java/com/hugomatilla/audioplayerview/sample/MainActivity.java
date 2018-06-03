@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.hugomatilla.audioplayerview.AudioPlayerView;
+import afriwan.ahda.AudioPlayerView;
 
 public class MainActivity extends AppCompatActivity {
 
