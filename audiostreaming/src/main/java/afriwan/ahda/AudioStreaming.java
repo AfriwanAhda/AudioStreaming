@@ -1,21 +1,17 @@
-package afriwan.ahda;
+//      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
 
+package afriwan.ahda;
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
-
-import afriwan.ahda.R;
-
 import java.io.IOException;
 
 @SuppressLint("AppCompatCustomView")
@@ -43,10 +39,6 @@ public class AudioStreaming extends TextView {
     }
 
     private OnAudioPlayerViewListener listener;
-
-    public void setOnAudioPlayerViewListener(OnAudioPlayerViewListener listener) {
-        this.listener = listener;
-    }
 
     private void sendCallbackAudioFinished() {
         if (listener != null)
@@ -81,21 +73,14 @@ public class AudioStreaming extends TextView {
         getAttributes(attrs);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public AudioStreaming(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        this.context = context;
-        getAttributes(attrs);
-    }
-
     public void getAttributes(AttributeSet attrs) {
-        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.AudioPlayerTextView, 0, 0);
+        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.AudioStreaming, 0, 0);
 
         try {
-            stopText = a.getString(R.styleable.AudioPlayerTextView_stopText);
-            playText = a.getString(R.styleable.AudioPlayerTextView_playText);
-            loadingText = a.getString(R.styleable.AudioPlayerTextView_loadingText);
-            useIcons = a.getBoolean(R.styleable.AudioPlayerTextView_useIcons, true);
+            stopText = a.getString(R.styleable.AudioStreaming_stopText);
+            playText = a.getString(R.styleable.AudioStreaming_playText);
+            loadingText = a.getString(R.styleable.AudioStreaming_loadingText);
+            useIcons = a.getBoolean(R.styleable.AudioStreaming_useIcons, true);
 
             if ((stopText != null && playText != null && loadingText != null) && useIcons)
                 usesCustomIcons = true;
@@ -131,7 +116,6 @@ public class AudioStreaming extends TextView {
         }
     }
 
-
     private OnClickListener onViewClickListener = new OnClickListener() {
 
         public void onClick(View v) {
@@ -145,7 +129,7 @@ public class AudioStreaming extends TextView {
 
     public void toggleAudio() throws IOException {
         if (mediaPlayer != null && mediaPlayer.isPlaying())
-            stop();
+            pause();
         else
             play();
     }
@@ -211,10 +195,9 @@ public class AudioStreaming extends TextView {
         this.startAnimation(rotation);
     }
 
-    private void stop() {
+    private void pause() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
-            mediaPlayer.seekTo(0);
             setText(playText);
         }
     }
@@ -226,6 +209,5 @@ public class AudioStreaming extends TextView {
             audioReady = false;
         }
     }
-
 
 }

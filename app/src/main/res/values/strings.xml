@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">AudioStreaming</string>
+    <string name="app_name">Audio Streaming</string>
     <string name="customLoadingIcon">&#xe807;</string>
     <string name="customPlayIcon">&#xe802;</string>
     <string name="customStopIcon">&#xe803;</string>
+    <string name="stream_audio">Radio Rasil</string>
 </resources>
