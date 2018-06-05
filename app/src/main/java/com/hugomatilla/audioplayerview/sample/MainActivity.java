@@ -6,13 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import afriwan.ahda.AudioPlayerView;
+import afriwan.ahda.AudioStreaming;
 
 public class MainActivity extends AppCompatActivity {
 
     String url = "http://www.freesound.org/data/previews/137/137227_1735491-lq.mp3";
     private View spinner;
-    private AudioPlayerView audioPlayerView, audioPlayerViewText, audioPlayerViewCustomFont;
+    private AudioStreaming audioStreaming, audioStreamingText, audioStreamingCustomFont;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         spinner = findViewById(R.id.loading_spinner);
 
-        audioPlayerView = (AudioPlayerView) findViewById(R.id.play);
-        audioPlayerView.withUrl(url);
-        audioPlayerView.setOnAudioPlayerViewListener(new AudioPlayerView.OnAudioPlayerViewListener() {
+        audioStreaming = (AudioStreaming) findViewById(R.id.play);
+        audioStreaming.withUrl(url);
+        audioStreaming.setOnAudioPlayerViewListener(new AudioStreaming.OnAudioPlayerViewListener() {
             @Override
             public void onAudioPreparing() {
                 Toast.makeText(getBaseContext(), "Audio is loading callback", Toast.LENGTH_SHORT).show();
@@ -42,21 +42,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        audioPlayerViewText = (AudioPlayerView) findViewById(R.id.playText);
-        audioPlayerViewText.withUrl(url);
+        audioStreamingText = (AudioStreaming) findViewById(R.id.playText);
+        audioStreamingText.withUrl(url);
 
 
-        audioPlayerViewCustomFont = (AudioPlayerView) findViewById(R.id.playCustomFonts);
+        audioStreamingCustomFont = (AudioStreaming) findViewById(R.id.playCustomFonts);
         Typeface iconFont = Typeface.createFromAsset(getAssets(), "audio-player-view-font-custom.ttf");
-        audioPlayerViewCustomFont.setTypeface(iconFont);
-        audioPlayerViewCustomFont.withUrl(url);
+        audioStreamingCustomFont.setTypeface(iconFont);
+        audioStreamingCustomFont.withUrl(url);
     }
 
     @Override
     protected void onDestroy() {
-        audioPlayerView.destroy();
-        audioPlayerViewText.destroy();
-        audioPlayerViewCustomFont.destroy();
+        audioStreaming.destroy();
+        audioStreamingText.destroy();
+        audioStreamingCustomFont.destroy();
         super.onDestroy();
     }
 }

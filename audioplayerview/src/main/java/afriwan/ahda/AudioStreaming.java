@@ -1,9 +1,5 @@
 package afriwan.ahda;
 
-/**
- * Created by hugomatilla on 10/02/16.
- */
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -23,7 +19,7 @@ import afriwan.ahda.R;
 import java.io.IOException;
 
 @SuppressLint("AppCompatCustomView")
-public class AudioPlayerView extends TextView {
+public class AudioStreaming extends TextView {
     private static final String NULL_PARAMETER_ERROR = "`stopText`, `playText` and `loadingText`" +
             " must have some value, if `useIcons` is set to false. Set `useIcons` to true, or add strings to stopText`, " +
             "`playText` and `loadingText` in the AudioPlayerView.xml";
@@ -68,25 +64,25 @@ public class AudioPlayerView extends TextView {
     }
 
     //Constructors
-    public AudioPlayerView(Context context) {
+    public AudioStreaming(Context context) {
         super(context);
         this.context = context;
     }
 
-    public AudioPlayerView(Context context, AttributeSet attrs) {
+    public AudioStreaming(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         getAttributes(attrs);
     }
 
-    public AudioPlayerView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public AudioStreaming(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         getAttributes(attrs);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public AudioPlayerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public AudioStreaming(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         this.context = context;
         getAttributes(attrs);
