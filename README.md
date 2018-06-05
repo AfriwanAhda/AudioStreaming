@@ -1,6 +1,15 @@
-# Library AudioStreaming
+# Library Audio Streaming
 
-Gradle is the only supported build configuration, so just add the dependency to your project `build.gradle` file:
+Gradle is the only supported build configuration, so just add to your project `build.gradle` file:
+
+```groovy
+allprojects {
+repositories {
+...
+maven { url 'https://jitpack.io' }
+}
+}
+```
 
 ```groovy
 dependencies {
