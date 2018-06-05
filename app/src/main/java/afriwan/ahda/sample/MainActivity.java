@@ -12,7 +12,7 @@ import afriwan.ahda.AudioStreaming;
 
 public class MainActivity extends AppCompatActivity {
 
-    String url = "http://radio1190.colorado.edu:8000/high.mp3";
+    String url = "http://203.24.76.112:8000/stereo";
     private View spinner;
     private AudioStreaming audioStreaming, audioStreamingText, audioStreamingCustomFont;
 
