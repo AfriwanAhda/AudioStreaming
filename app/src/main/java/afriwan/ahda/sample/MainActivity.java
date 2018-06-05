@@ -1,4 +1,4 @@
-package com.hugomatilla.audioplayerview.sample;
+package afriwan.ahda.sample;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.hugomatilla.audioplayerview.sample.R;
+
 import afriwan.ahda.AudioStreaming;
 
 public class MainActivity extends AppCompatActivity {
 
-    String url = "http://www.freesound.org/data/previews/137/137227_1735491-lq.mp3";
+    String url = "http://radio1190.colorado.edu:8000/high.mp3";
     private View spinner;
     private AudioStreaming audioStreaming, audioStreamingText, audioStreamingCustomFont;
 

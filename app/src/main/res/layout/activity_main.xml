@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.hugomatilla.audioplayerview.sample.MainActivity">
+    tools:context="com.hugomatilla.audioplayerview.sample.afriwan.ahda.sample.MainActivity">
 
     <ProgressBar android:id="@+id/loading_spinner"
                  android:layout_width="wrap_content"
