@@ -1,1 +1,1 @@
-include ':app', ':audioplayerview'
+include ':app', ':audiostreaming'

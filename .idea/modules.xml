@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AudioPlayerView-master.iml" filepath="$PROJECT_DIR$/AudioPlayerView-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/audioplayerview/audioplayerview.iml" filepath="$PROJECT_DIR$/audioplayerview/audioplayerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiostreaming/audiostreaming.iml" filepath="$PROJECT_DIR$/audiostreaming/audiostreaming.iml" />
     </modules>
   </component>
 </project>
